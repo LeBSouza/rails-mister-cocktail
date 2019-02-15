@@ -1,0 +1,17 @@
+<div id="main-container" class="container">
+
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-sm-4" >
+      <div class="polaroid", style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('https://stevethebartender.com.au/wp-content/uploads/2015/11/winter-sun-cocktail.jpg');">
+        <div class="polaroid-category"><%= cocktail.name %></div>
+        <div class="polaroid-description">
+          <p><%= link_to 'Show', cocktail %></p>
+          <p><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      </div>
+      <a class="polaroid-link" href="#" ></a>
+    </div>
+    <% end %>
+  </div>
+</div>
